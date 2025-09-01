@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Add CSS styles here */
+        nav{
+    display: flex;
+    height: 5rem;
+    background-color: #1a1927;
+
+}
+nav *{
+    padding-left: 4rem;
+    /* border: 2px solid yellow; */
+    /* position: relative;
+    top: 1rem; */
+}
+nav *:hover{
+    text-decoration: underline;
+}
+nav :nth-child(2){
+    margin-left: 5rem;
+}
+.logo{
+    margin-left: -3rem;
+    /* position: relative;
+    top: 0; */
+}
+.logo img{
+    height: 100%;
+    width: 100%;
+   
+}
+        .cart-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+        }
+        .cart-table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        .cart-table th, .cart-table td {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            text-align: left;
+        }
+        .cart-table th {
+            background-color: #ae4e4e;
+        }
+        .cart-table img {
+            width: 100px;
+            height: 150px;
+            object-fit: cover;
+        }
+        .remove-from-cart {
+            background-color: #e74c3c;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 0.25rem;
+            cursor: pointer;
+        }
+        .remove-from-cart:hover {
+            background-color: #c0392b;
+        }
+        .order-now {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            margin-top: 2rem;
+        }
+        .order-now:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="https://www.logolynx.com/images/logolynx/aa/aa3993182ad88a047d21fbcc09b44d04.png" alt="book logo">
+        </div>
+        
+        <div class="home">
+              <h2>BookMaster</h2>
+        </div>
+        <div class="login">
+              <h3>LOGIN</h3>
+        </div>
+        <div class="catalogue">
+              <h3>CATALOGUE</h3>
+        </div>
+        <div class="cart">
+            <h3>CART</h3>
+        </div>
+     </nav>
+    <div class="cart-container">
+        <h2>Book Cart</h2>
+        <table class="cart-table">
+            <tr>
+                <th>Book</th>
+                <th>Author</th>
+                <th>Publisher</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Remove from Cart</th>
+            </tr>
+            <tr>
+                <td><h3>Java 2</h3></td>
+                <td>Arpit Kumar</td>
+                <td>Antony Publications</td>
+                <td>₹40.5</td>
+                <td>2</td>
+                <td><button class="remove-from-cart">Remove</button></td>
+            </tr>
+            <tr>
+                <td>XML Bible></td>
+                <td>Abheer Agarwal</td>
+                <td>XML Groups</td>
+                <td>₹63</td>
+                <td>1</td>
+                <td><button class="remove-from-cart">Remove</button></td>
+            </tr>
+            <tr>
+                <th colspan="5">Total</th>
+                <th>₹103.5</th>
+            </tr>
+        </table>
+        <button class="order-now">Order Now</button>
+    </div>
+</body>
+</html>
